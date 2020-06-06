@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  table {
+    border-spacing: 0;
+  }
+
+html {
+    height: 100%;
+    width: 100%;
+
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5% //width 1200-1800
+
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
+    }
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    @include respond(phone) { // width < 600?   
+        font-size: 30%; //1 rem = 4.8px
+    }
+    @include respond(big-desktop) { //width apprx > 1800px
+        font-size: 75%; //1rem = 12, 12/16 = 75%
+    }
+}
+
+body {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    color: rgb(40,40,40);
+    padding: 2rem;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}

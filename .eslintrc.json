@@ -1,0 +1,29 @@
+{
+  "env": {
+      "browser": true,
+      "es6": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+  ],
+  "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "allowImportExportEverywhere": true
+  },
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "rules": {
+    "no-undef": 2, // disallow the use of undeclared variables unless mentioned in `/*global */` comments
+    "no-unused-vars": [1, { "argsIgnorePattern": "^(next|_)$" }], // disallow unused variables
+    "react/prop-types": 0 // Prevent missing props validation in a React component definition
+  }
+}
