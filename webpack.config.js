@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development', //change to 'production' for production
@@ -91,7 +90,6 @@ module.exports = {
   },
   devtool: 'inline-source-map', // remove for production
   plugins: [
-    // new CleanWebpackPlugin(), //add for production
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
